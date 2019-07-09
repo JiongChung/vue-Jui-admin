@@ -102,7 +102,7 @@
     import Pagination from '@/components/page/index';
     import Search from './search';
     import CreateOrEditPaylistModal from './createOrEditPaylistModal';
-    import { getChargeList } from '@/api/api';
+    import { getChargeList, loadHtml } from '@/api/api';
     export default {
         components: {
             'v-page': Pagination,
@@ -135,10 +135,12 @@
             }
         },
         mounted () {
+            this.loadingHtml = loadHtml();
             this.getChargeList();
         },
         methods: {
             getChargeList(){
+                this.isloading = true;
                 getChargeList(
                     this.InviteCode ? this.InviteCode : undefined,
                     this.PhoneNumber ? this.PhoneNumber : undefined,

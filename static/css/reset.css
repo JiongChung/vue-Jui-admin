@@ -446,3 +446,23 @@ body{
     font-style: normal
 
 }
+
+.header-menu{
+    position: relative;
+    padding-right: 200px;
+}
+.userinfo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 45px;
+    background: rgb(84, 92, 100);
+    width: 200px;
+    border-bottom: solid 1px #e6e6e6;
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+}
+.userinfo .el-dropdown{
+    color: white;
+}

@@ -5,6 +5,7 @@ const Dashboard = r => require.ensure([], () => r(require('@/pages/dashboard/ind
 const Test = r => require.ensure([], () => r(require('@/pages/test/index')), 'Test');
 
 const ChargeList = r => require.ensure([], () => r(require('@/pages/youlian/chargelist/index')), 'ChargeList');
+const DrawingApplyList = r => require.ensure([], () => r(require('@/pages/youlian/drawingapplylist/index')), 'DrawingApplyList');
 
 Vue.use(Router)
 
@@ -16,6 +17,7 @@ export default new Router({
         { path: '/account/login', name: 'Login', component: Login },
         { path: '/admin/test', name: 'Test', component: Test },
         { path: '/admin/youlian/chargelist', name: 'ChargeList', component: ChargeList },
+        { path: '/admin/youlian/drawingapplylist', name: 'DrawingApplyList', component: DrawingApplyList },
         { path: "*", redirect: "/admin/" }
     ]
 })

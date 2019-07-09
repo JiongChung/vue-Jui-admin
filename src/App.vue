@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import { getCookie, isloading, islogin } from './service/common';
+    import { getCookie, loadHtml, islogin } from './service/common';
     export default {
         name: 'App',
         provide(){
@@ -23,7 +23,7 @@
         },
        
         mounted: function(){
-            this.loadingHtml = isloading();
+            this.loadingHtml = loadHtml();
             this.$nextTick(() => {
                 if(!islogin()){
                     this.$router.push('/account/login');

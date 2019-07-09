@@ -1,6 +1,6 @@
 <template>
     <div :style="{height: (iframeItem ? '100%' : '')}">
-        <div>
+        <div class="header-menu">
             <el-menu
                 :default-active="activeIndex"
                 class="el-menu-demo"
@@ -19,6 +19,18 @@
                         </el-submenu>
                     </el-submenu>
             </el-menu>
+            <div class="userinfo">
+                <el-dropdown>
+                    <span class="el-dropdown-link">
+                        你好，admin<i class="el-icon-arrow-down el-icon--right"></i>
+                    </span>
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item>黄金糕</el-dropdown-item>
+                        <el-dropdown-item>狮子头</el-dropdown-item>
+                        <el-dropdown-item>退出</el-dropdown-item>
+                    </el-dropdown-menu>
+                </el-dropdown>
+            </div>
         </div>
         <div style="height: 100%;margin-top: -48px;padding-top: 48px;" v-show="iframeItem">
             <div class="tabtools">

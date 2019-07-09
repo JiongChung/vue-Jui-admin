@@ -151,10 +151,10 @@ export default{
         }
     },
     mounted(){
-        this.userChargeInit();
+        this.getuserChargeInit();
     },
     methods: {
-        userChargeInit(){
+        getuserChargeInit(){
             userChargeInit().then(data => {
                 this.agentGradeList = data.result.agentGrade;
                 this.userGradeList = data.result.userGrade;

@@ -122,7 +122,7 @@ export const islogin = () =>{
     }
     return status;
 };
-export const isloading = () => {
+export const loadHtml = () => {
     let html = ''+ 
         '<div class="el-loading-item">'+
             '<div class="el-loading-mask" style="background:rgba(0,0,0,0.2);"><div class="el-loading-spinner"><svg viewBox="25 25 50 50" class="circular"><circle cx="50" cy="50" r="20" fill="none" class="path"></circle></svg></div></div>'+
